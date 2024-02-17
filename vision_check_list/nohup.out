@@ -1,0 +1,259 @@
+INFO:     Started server process [2633919]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+28c10a4d1ce94e4fb02dce43c7e22aa1
+하이트)참이슬후레쉬16.5도360ML
+롯데)처음처럼병360ML(부드러운맛)
+롯데)청하화인병300ML
+하이트)진로16.5도360ML
+INFO:     192.168.0.193:43196 - "POST /visionchecklist HTTP/1.1" 200 OK
+28c10a4d1ce94e4fb02dce43c7e22aa1
+롯데)처음처럼새로병360ML
+롯데)처음처럼병360ML(부드러운맛)
+하이트)참이슬후레쉬16.5도360ML
+하이트)진로16.5도360ML
+오비)한맥355ml
+INFO:     192.168.0.193:33650 - "POST /visionchecklist HTTP/1.1" 200 OK
+28c10a4d1ce94e4fb02dce43c7e22aa1
+롯데)처음처럼새로병360ML
+별빛 청하 스파클링 병 295ml
+롯데)청하화인병300ML
+INFO:     192.168.0.193:43388 - "POST /visionchecklist HTTP/1.1" 200 OK
+28c10a4d1ce94e4fb02dce43c7e22aa1
+롯데)처음처럼새로병360ML
+별빛 청하 스파클링 병 295ml
+롯데)청하화인병300ML
+INFO:     192.168.0.193:39676 - "POST /visionchecklist HTTP/1.1" 200 OK
+28c10a4d1ce94e4fb02dce43c7e22aa1
+롯데)처음처럼새로병360ML
+별빛 청하 스파클링 병 295ml
+롯데)청하화인병300ML
+INFO:     192.168.0.193:50064 - "POST /visionchecklist HTTP/1.1" 200 OK
+28c10a4d1ce94e4fb02dce43c7e22aa1
+롯데)처음처럼새로병360ML
+별빛 청하 스파클링 병 295ml
+롯데)청하화인병300ML
+INFO:     192.168.0.193:36566 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [1351877]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.193:39150 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.193:49544 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44552 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44552 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.193:34086 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.193:40298 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.193:40302 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.193:43824 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.193:40974 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+body failed validation. Fix one:
+body.parent.database_id should be a valid uuid, instead was `"string"`.
+body.parent.page_id should be defined, instead was `undefined`.
+INFO:     127.0.0.1:44556 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44558 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [1353001]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:44564 - "POST /visionchecklist HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.193:42240 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:51264 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [1720978]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.193:53894 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:53246 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42250 - "GET /oauth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42250 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42252 - "GET /oauth/login?code=WRK4gDsgQKK2eMtbpl&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42254 - "GET /oauth/login?code=WRK4gDsgQKK2eMtbpl&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42256 - "GET /oauth/login?code=zCF7N8zyXnDDtPADSg&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42258 - "GET /oauth/login?code=Fkm7IjWnIL5LILfTJI&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42260 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42260 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42262 - "GET /%E3%85%90%EB%A9%B0%EC%86%8C HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42264 - "GET /oauth HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42264 - "GET /oauth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42266 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42268 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     192.168.0.155:47778 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=haMPC2QUkmR6EnrGT4&state=test HTTP/1.1" 404 Not Found
+INFO:     192.168.0.155:47778 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42272 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=prgXHH7lV2NcktV6ua&state=test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42274 - "GET /Api/Member/Oauth2ClientCallback/naver/?code=d6a3krSFPNbLiiMsFn&state=test HTTP/1.1" 404 Not Found
+INFO:     192.168.0.193:60464 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:34140 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:40192 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:52862 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:58230 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:45354 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:44300 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:46910 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:57052 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [9620]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    import uvicorn
+ModuleNotFoundError: No module named 'uvicorn'
+INFO:     Started server process [6551]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started server process [361331]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started server process [6706]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started server process [70332]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.155:42222 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.155:42222 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.155:42228 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:49144 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:38970 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.193:49562 - "POST /visionchecklist HTTP/1.1" 200 OK
+Could not find database with ID: 526304b8-3a06-40dc-a8cf-f97b85d0f06d. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:45580 - "POST /visionchecklist HTTP/1.1" 200 OK
+Could not find database with ID: 526304b8-3a06-40dc-a8cf-f97b85d0f06d. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:45080 - "POST /visionchecklist HTTP/1.1" 200 OK
+Could not find database with ID: 526304b8-3a06-40dc-a8cf-f97b85d0f06d. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:39416 - "POST /visionchecklist HTTP/1.1" 200 OK
+Could not find database with ID: 526304b8-3a06-40dc-a8cf-f97b85d0f06d. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:35648 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.193:47384 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.193:47400 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.193:44366 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     192.168.0.155:60812 - "GET /visionchecklist HTTP/1.1" 405 Method Not Allowed
+INFO:     192.168.0.155:60812 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.0.155:60822 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.155:60822 - "GET /openapi.json HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:53144 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:60416 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:58612 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [217986]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.155:59138 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.155:59138 - "GET /openapi.json HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:59138 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:59150 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:52582 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:34524 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:56562 - "POST /visionchecklist HTTP/1.1" 200 OK
+Unsaved transactions: Unrecognized error.
+INFO:     192.168.0.155:38436 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [255685]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started server process [255714]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [255857]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [255932]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started server process [255942]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     192.168.0.155:57636 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.155:57636 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.155:57642 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     Started server process [704958]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Could not find database with ID: d054f1d7-8270-4cc0-8a98-93d24a53e389. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:34370 - "POST /visionchecklist HTTP/1.1" 200 OK
+Could not find database with ID: d054f1d7-8270-4cc0-8a98-93d24a53e389. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:48926 - "POST /visionchecklist HTTP/1.1" 200 OK
+Could not find database with ID: d054f1d7-8270-4cc0-8a98-93d24a53e389. Make sure the relevant pages and databases are shared with your integration.
+INFO:     192.168.0.193:32968 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34166 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34166 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34176 - "GET /visionchecklist HTTP/1.1" 405 Method Not Allowed
+INFO:     Started server process [707182]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started server process [707214]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     127.0.0.1:57154 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57158 - "GET /visionchecklist HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:35188 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35188 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60806 - "POST /visionchecklist HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52626 - "POST /visionchecklist HTTP/1.1" 200 OK
