@@ -197,4 +197,3 @@ if __name__ == "__main__":
     # # store_id= args.store_id
     # # device_id = args.device_id
     vc.write_vision_check_list(database_id, store_id, device_id)
-# https://www.notion.so/interminds/d054f1d782704cc08a9893d24a53e389?v=e3df701ed75049c5966f78bc44575ae0&pvs=4
