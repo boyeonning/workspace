@@ -1,0 +1,6 @@
+2022-09-20 16:03:42.943 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/guinness_440/qt_mobilenetv3_small_075
+2022-09-20 16:03:42.944 | INFO     | __main__:<module>:49 - guinness_440 initializing at 172.18.0.6:8080 revision None
+2022-09-20 16:03:42.946 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.10.0+cu102, tf=2.3.0 CPU
+
+2022-09-20 16:03:43.081 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-20 16:03:43.082 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-guinness_440] start serving at 172.18.0.6:8080 revision None🏃‍🐆🐴🏁🏁

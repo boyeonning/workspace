@@ -1,0 +1,12 @@
+class:
+  0: 'False'
+  1: 'True'
+dataset name: pilsner_urquell_500_can
+epoch: 44
+img_size:
+- 224
+- 224
+model_name: shufflenet_v2
+num_class: 1
+score_threshold: 0.8
+version: 1

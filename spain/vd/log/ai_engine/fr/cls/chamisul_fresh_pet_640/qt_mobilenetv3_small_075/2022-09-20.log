@@ -1,0 +1,6 @@
+2022-09-20 16:03:51.658 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/chamisul_fresh_pet_640/qt_mobilenetv3_small_075
+2022-09-20 16:03:51.659 | INFO     | __main__:<module>:49 - chamisul_fresh_pet_640 initializing at 172.18.0.26:8080 revision None
+2022-09-20 16:03:51.660 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.10.0+cu102, tf=2.3.0 CPU
+
+2022-09-20 16:03:51.775 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-20 16:03:51.776 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-chamisul_fresh_pet_640] start serving at 172.18.0.26:8080 revision None🏃‍🐆🐴🏁🏁

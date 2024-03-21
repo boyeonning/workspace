@@ -1,0 +1,6 @@
+2022-09-22 12:11:50.025 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/stella_artois_500_can/qt_mobilenetv3_small_075
+2022-09-22 12:11:50.026 | INFO     | __main__:<module>:49 - stella_artois_500_can initializing at 172.18.0.20:8080 revision None
+2022-09-22 12:11:50.029 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.10.0+cu102, tf=2.3.0 CPU
+
+2022-09-22 12:11:50.158 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-22 12:11:50.159 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-stella_artois_500_can] start serving at 172.18.0.20:8080 revision None🏃‍🐆🐴🏁🏁

@@ -1,0 +1,162 @@
+2022-09-21 12:00:47.045 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:00:47.047 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:00:47.047 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:00:47.110 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:00:49.873 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:00:49.873 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 2.83s
+2022-09-21 12:01:01.617 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:01:01.618 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:01:01.618 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:01:01.672 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:01:06.312 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:01:06.313 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 4.7s
+2022-09-21 12:01:11.035 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:01:11.035 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:01:11.036 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:01:11.091 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:01:11.427 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:01:11.427 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:01:15.606 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:01:15.607 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:01:15.607 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:01:15.658 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:01:15.992 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:01:15.992 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:03:35.289 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:03:35.290 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:03:35.290 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:03:35.342 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:03:35.677 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:03:35.677 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:03:38.469 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:03:38.469 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:03:38.470 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:03:38.522 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:03:38.855 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:03:38.856 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:03:56.416 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:03:56.416 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:03:56.417 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:03:56.471 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:03:56.806 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:03:56.807 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:03:57.176 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:03:57.177 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:03:57.177 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:03:57.229 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:03:57.561 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:03:57.562 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:04:25.046 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:04:25.046 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:04:25.047 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:04:25.097 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:04:25.430 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:04:25.430 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.38s
+2022-09-21 12:04:26.305 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:04:26.305 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:04:26.306 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:04:26.359 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:04:26.690 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:04:26.690 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:05:24.944 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:05:24.945 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:05:24.945 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:05:25.019 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:05:25.469 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:05:25.469 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.53s
+2022-09-21 12:05:28.333 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:05:28.334 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:05:28.334 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:05:28.404 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:05:28.789 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:05:28.789 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.46s
+2022-09-21 12:06:07.546 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:06:07.547 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:06:07.547 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:06:07.600 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:06:07.958 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:06:07.959 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.41s
+2022-09-21 12:07:32.697 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:07:32.697 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:07:32.698 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:07:32.755 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:07:33.111 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:07:33.112 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.42s
+2022-09-21 12:07:33.583 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:07:33.583 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:07:33.584 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:07:33.637 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:07:34.003 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:07:34.003 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.42s
+2022-09-21 12:09:29.588 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:09:29.588 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:09:29.589 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:09:29.640 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:09:30.035 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:09:30.035 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.45s
+2022-09-21 12:12:20.705 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:12:20.706 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:12:20.706 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:12:20.760 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:12:21.098 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:12:21.099 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 12:13:05.638 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:13:05.638 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:13:05.638 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:13:05.677 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:13:06.049 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:13:06.050 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.41s
+2022-09-21 12:13:27.888 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:13:27.888 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:13:27.888 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:13:27.928 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:13:28.292 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:13:28.293 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.4s
+2022-09-21 12:13:28.749 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 12:13:28.750 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 12:13:28.751 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 12:13:28.805 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 12:13:29.182 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 12:13:29.183 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.43s
+2022-09-21 15:14:14.247 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:14:14.249 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:14:14.249 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:14:14.307 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:14:14.693 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:14:14.694 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.45s
+2022-09-21 15:14:25.005 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:14:25.005 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:14:25.006 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:14:25.058 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:14:25.394 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:14:25.394 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 15:14:26.089 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:14:26.089 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:14:26.090 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:14:26.144 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:14:26.480 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:14:26.480 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 15:14:44.225 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:14:44.226 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:14:44.226 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:14:44.280 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:14:44.618 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:14:44.618 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.39s
+2022-09-21 15:18:52.956 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:18:52.957 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:18:52.957 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:18:53.012 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:18:53.399 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:18:53.399 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.44s
+2022-09-21 15:18:53.845 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:18:53.846 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:18:53.846 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:18:53.901 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:18:54.275 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:18:54.275 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.43s
+2022-09-21 15:21:55.311 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-21 15:21:55.312 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-21 15:21:55.312 | INFO     | app:execute:109 - terra_500 API Start from user id [VD]
+2022-09-21 15:21:55.368 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa604170240>
+2022-09-21 15:21:55.759 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-21 15:21:55.759 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.45s

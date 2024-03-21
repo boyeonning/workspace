@@ -1,0 +1,557 @@
+version: "3.7"
+
+services:
+  fr-cls-test_big_wave_golden_ale_473:
+    container_name: fr-cls-test_big_wave_golden_ale_473
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_big_wave_golden_ale_473 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_carlsberg_500:
+    container_name: fr-cls-test_carlsberg_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_carlsberg_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_cass_fresh_355:
+    container_name: fr-cls-test_cass_fresh_355
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_cass_fresh_355 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_cass_fresh_500:
+    container_name: fr-cls-test_cass_fresh_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_cass_fresh_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_cass_light_500:
+    container_name: fr-cls-test_cass_light_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_cass_light_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_cass_zero_355:
+    container_name: fr-cls-test_cass_zero_355
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_cass_zero_355 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_chamisul_fresh_pet_640:
+    container_name: fr-cls-test_chamisul_fresh_pet_640
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_chamisul_fresh_pet_640 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_fil_good_500:
+    container_name: fr-cls-test_fil_good_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_fil_good_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_filite_fresh_500:
+    container_name: fr-cls-test_filite_fresh_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_filite_fresh_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_guinness_440:
+    container_name: fr-cls-test_guinness_440
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_guinness_440 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_hanmac_500:
+    container_name: fr-cls-test_hanmac_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_hanmac_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_heineken_500:
+    container_name: fr-cls-test_heineken_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_heineken_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_hoegaarden_500:
+    container_name: fr-cls-test_hoegaarden_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_hoegaarden_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_iseul_tok_tok_355:
+    container_name: fr-cls-test_iseul_tok_tok_355
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_iseul_tok_tok_355 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_jipyeong_makgeolli_750:
+    container_name: fr-cls-test_jipyeong_makgeolli_750
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_jipyeong_makgeolli_750 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_kgb_lemon_355:
+    container_name: fr-cls-test_kgb_lemon_355
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_kgb_lemon_355 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_kloud_500:
+    container_name: fr-cls-test_kloud_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_kloud_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_kloud_draft_500:
+    container_name: fr-cls-test_kloud_draft_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_kloud_draft_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_somersby_500:
+    container_name: fr-cls-test_somersby_500
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_somersby_500 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_soonhari_lemon_4_355:
+    container_name: fr-cls-test_soonhari_lemon_4_355
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_soonhari_lemon_4_355 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_soonhari_lemon_7_355:
+    container_name: fr-cls-test_soonhari_lemon_7_355
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_soonhari_lemon_7_355 --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+  fr-cls-test_stella_artois_500_can:
+    container_name: fr-cls-test_stella_artois_500_can
+    image: interminds-ai.com:5000/ai:0fe9dcb5
+    working_dir: /app
+    build:
+      context: ./
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.labels.datacenter==spain]
+      update_config:
+        parallelism: 1
+        delay: 2s
+        order: stop-first
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /mnt/weight:/mnt/weight
+      - /data1/log:/var/log
+    networks:
+      - vd-net
+    entrypoint: python waitress_server.py --device_type fr --model_type cls --model_name test_stella_artois_500_can --network qt_mobilenetv3_small_075 --version 0 --gpu cpu --log_path /var/log/ai_engine/
+
+
+networks:
+  vd-net:
+    external: true

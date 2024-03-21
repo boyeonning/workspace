@@ -1,0 +1,465 @@
+2022-09-06 09:39:06.972 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:39:06.973 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:39:06.976 | ERROR    | app:load_engine:42 - model load error -> [cass_fresh_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '../models/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f469a2e1ee0>
+           │  └ <module 'posixpath' from '/usr/lib/python3.8/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.8/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/vd/vd/ai_engines/app.py", line 48, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'cass_fresh_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '../models/'
+                    └ <function get_path_version at 0x7f45e0837670>
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f469a20a450, file "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/...
+           └ <function _run_code at 0x7f469a1e7160>
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f469a20a450, file "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/...
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f4699145dc0>
+    └ <module 'debugpy.server.cli' from '/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debug...
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f4699145b80>
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/vd/vd/ai_engines/waitress_server.py'
+    │     └ <function run_path at 0x7f469958e0d0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/pyt...
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f4698107710, file "/home/vd/vd/ai_engines/waitress_server.py", line 1>
+           └ <function _run_module_code at 0x7f4699582d30>
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/vd/vd/a...
+    │         └ <code object <module> at 0x7f4698107710, file "/home/vd/vd/ai_engines/waitress_server.py", line 1>
+    └ <function _run_code at 0x7f4699582940>
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/vd/vd/a...
+         └ <code object <module> at 0x7f4698107710, file "/home/vd/vd/ai_engines/waitress_server.py", line 1>
+
+  File "/home/vd/vd/ai_engines/waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f44f153d4c0>
+    └ <app.AIEngines object at 0x7f44f14ad190>
+
+> File "/home/vd/vd/ai_engines/app.py", line 32, in load_engine
+    self.version, self.engine = self.get_model(
+    │    │        │    │        │    └ <staticmethod object at 0x7f46980f67f0>
+    │    │        │    │        └ <app.AIEngines object at 0x7f44f14ad190>
+    │    │        │    └ None
+    │    │        └ <app.AIEngines object at 0x7f44f14ad190>
+    │    └ '0'
+    └ <app.AIEngines object at 0x7f44f14ad190>
+
+  File "/home/vd/vd/ai_engines/app.py", line 59, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-06 09:40:53.684 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:40:53.685 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:40:53.688 | ERROR    | app:load_engine:42 - model load error -> [cass_fresh_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '../models/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f24e0afdee0>
+           │  └ <module 'posixpath' from '/usr/lib/python3.8/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.8/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/vd/vd/ai_engines/app.py", line 48, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'cass_fresh_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '../models/'
+                    └ <function get_path_version at 0x7f2427074670>
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+           │         └ <code object <module> at 0x7f24e0a26450, file "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/...
+           └ <function _run_code at 0x7f24e0a03160>
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <_frozen_importlib_external.SourceFileLoader objec...
+         └ <code object <module> at 0x7f24e0a26450, file "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/...
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+    │   └ <function main at 0x7f24df961dc0>
+    └ <module 'debugpy.server.cli' from '/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debug...
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+    └ <function run_file at 0x7f24df961b80>
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+    │     │        └ '/home/vd/vd/ai_engines/waitress_server.py'
+    │     └ <function run_path at 0x7f24dfdaa0d0>
+    └ <module '_pydevd_bundle.pydevd_runpy' from '/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/pyt...
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 321, in run_path
+    return _run_module_code(code, init_globals, run_name,
+           │                │     │             └ '__main__'
+           │                │     └ None
+           │                └ <code object <module> at 0x7f24de11ea80, file "/home/vd/vd/ai_engines/waitress_server.py", line 1>
+           └ <function _run_module_code at 0x7f24dfd9ed30>
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 135, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+    │         │     │            └ None
+    │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/vd/vd/a...
+    │         └ <code object <module> at 0x7f24de11ea80, file "/home/vd/vd/ai_engines/waitress_server.py", line 1>
+    └ <function _run_code at 0x7f24dfd9e940>
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': None, '__spec__': None, '__file__': '/home/vd/vd/a...
+         └ <code object <module> at 0x7f24de11ea80, file "/home/vd/vd/ai_engines/waitress_server.py", line 1>
+
+  File "/home/vd/vd/ai_engines/waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f2337d5d4c0>
+    └ <app.AIEngines object at 0x7f2337ccf250>
+
+> File "/home/vd/vd/ai_engines/app.py", line 32, in load_engine
+    self.version, self.engine = self.get_model(
+    │    │        │    │        │    └ <staticmethod object at 0x7f24de112ca0>
+    │    │        │    │        └ <app.AIEngines object at 0x7f2337ccf250>
+    │    │        │    └ None
+    │    │        └ <app.AIEngines object at 0x7f2337ccf250>
+    │    └ '0'
+    └ <app.AIEngines object at 0x7f2337ccf250>
+
+  File "/home/vd/vd/ai_engines/app.py", line 59, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-06 09:44:19.488 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:44:19.488 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:46:10.278 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:46:10.278 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:46:18.389 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:46:24.152 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-06 09:46:28.454 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-cass_fresh_500] start serving at 192.168.0.113:8080 revision None🏃‍🐆🐴🏁🏁
+2022-09-06 09:46:49.836 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:46:49.837 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:46:49.838 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:48:04.371 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:48:04.372 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:48:07.756 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:49:12.775 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:49:12.776 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:49:12.777 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:49:53.033 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:49:53.034 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:49:53.037 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:50:46.527 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:50:46.527 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:50:46.530 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:50:51.167 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-06 09:50:51.169 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-cass_fresh_500] start serving at 192.168.0.113:8080 revision None🏃‍🐆🐴🏁🏁
+2022-09-06 09:50:55.968 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:50:55.969 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:50:55.970 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:51:00.820 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7efcf4afc520>
+2022-09-06 09:51:00.822 | ERROR    | app:execute:140 - 🔴 AI inference failed due to 
+Traceback (most recent call last):
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 99, in base64_to_tensor
+    im_bytes = base64.b64decode(bytes(encoded_str, 'utf-8'))
+               │      │               └ '/'
+               │      └ <function b64decode at 0x7efe9d657ee0>
+               └ <module 'base64' from '/usr/lib/python3.8/base64.py'>
+
+  File "/usr/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+           │        │          └ b'/'
+           │        └ <built-in function a2b_base64>
+           └ <module 'binascii' (built-in)>
+
+binascii.Error: Invalid base64-encoded string: number of data characters (1) cannot be 1 more than a multiple of 4
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/vd/vd/ai_engines/engines/torch_classifier/model.py", line 65, in inference
+    inputs = torch.cat([base64_to_tensor(i, self.gpu) for i in batch])
+             │     │    │                   │    │             └ '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAg'
+             │     │    │                   │    └ device(type='cpu')
+             │     │    │                   └ <engines.torch_classifier.model.TorchClassifier object at 0x7efe9af55d60>
+             │     │    └ <function base64_to_tensor at 0x7efcf5148dc0>
+             │     └ <built-in method cat of type object at 0x7efd4cdf2980>
+             └ <module 'torch' from '/home/vd/.local/lib/python3.8/site-packages/torch/__init__.py'>
+
+  File "/home/vd/vd/ai_engines/engines/torch_classifier/model.py", line 65, in <listcomp>
+    inputs = torch.cat([base64_to_tensor(i, self.gpu) for i in batch])
+             │     │    │                │  │    │        └ '/'
+             │     │    │                │  │    └ device(type='cpu')
+             │     │    │                │  └ <engines.torch_classifier.model.TorchClassifier object at 0x7efe9af55d60>
+             │     │    │                └ '/'
+             │     │    └ <function base64_to_tensor at 0x7efcf5148dc0>
+             │     └ <built-in method cat of type object at 0x7efd4cdf2980>
+             └ <module 'torch' from '/home/vd/.local/lib/python3.8/site-packages/torch/__init__.py'>
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 109, in base64_to_tensor
+    raise ConvertTensorError(msg=e)
+          └ <class 'error_code.error_code.ConvertTensorError'>
+
+error_code.error_code.ConvertTensorError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/vd/.vscode-server/extensions/ms-python.python-2022.14.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydev_bundle/pydev_monkey.py", line 1053, in __call__
+    ret = self.original_func(*self.args, **self.kwargs)
+          │    │              │    │       │    └ {}
+          │    │              │    │       └ <_pydev_bundle.pydev_monkey._NewThreadStartupWithTrace object at 0x7efcf4a372e0>
+          │    │              │    └ ()
+          │    │              └ <_pydev_bundle.pydev_monkey._NewThreadStartupWithTrace object at 0x7efcf4a372e0>
+          │    └ <bound method Thread._bootstrap of <Thread(waitress-0, started daemon 139624901150464)>>
+          └ <_pydev_bundle.pydev_monkey._NewThreadStartupWithTrace object at 0x7efcf4a372e0>
+
+  File "/usr/lib/python3.8/threading.py", line 890, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7efe9d7420d0>
+    └ <Thread(waitress-0, started daemon 139624901150464)>
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7efe9d73fdc0>
+    └ <Thread(waitress-0, started daemon 139624901150464)>
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(waitress-0, started daemon 139624901150464)>
+    │    │        │    └ (0,)
+    │    │        └ <Thread(waitress-0, started daemon 139624901150464)>
+    │    └ <bound method ThreadedTaskDispatcher.handler_thread of <waitress.task.ThreadedTaskDispatcher object at 0x7efcf4a2dd60>>
+    └ <Thread(waitress-0, started daemon 139624901150464)>
+  File "/home/vd/.local/lib/python3.8/site-packages/waitress/task.py", line 84, in handler_thread
+    task.service()
+    │    └ <function HTTPChannel.service at 0x7efcf4afef70>
+    └ <waitress.channel.HTTPChannel connected 192.168.0.153:33804 at 0x7efcf4a37640>
+  File "/home/vd/.local/lib/python3.8/site-packages/waitress/channel.py", line 428, in service
+    task.service()
+    │    └ <function Task.service at 0x7efcf4afe160>
+    └ <waitress.task.WSGITask object at 0x7efcf4a376a0>
+  File "/home/vd/.local/lib/python3.8/site-packages/waitress/task.py", line 168, in service
+    self.execute()
+    │    └ <function WSGITask.execute at 0x7efcf4afe5e0>
+    └ <waitress.task.WSGITask object at 0x7efcf4a376a0>
+  File "/home/vd/.local/lib/python3.8/site-packages/waitress/task.py", line 434, in execute
+    app_iter = self.channel.server.application(environ, start_response)
+               │    │       │      │           │        └ <function WSGITask.execute.<locals>.start_response at 0x7efcf4b23550>
+               │    │       │      │           └ {'REMOTE_ADDR': '192.168.0.153', 'REMOTE_HOST': '192.168.0.153', 'REMOTE_PORT': '33804', 'REQUEST_METHOD': 'POST', 'SERVER_PO...
+               │    │       │      └ <Flask 'app'>
+               │    │       └ <waitress.server.TcpWSGIServer listening 0.0.0.0:8080 at 0x7efcf4a37280>
+               │    └ <waitress.channel.HTTPChannel connected 192.168.0.153:33804 at 0x7efcf4a37640>
+               └ <waitress.task.WSGITask object at 0x7efcf4a376a0>
+  File "/home/vd/.local/lib/python3.8/site-packages/flask/app.py", line 2548, in __call__
+    return self.wsgi_app(environ, start_response)
+           │    │        │        └ <function WSGITask.execute.<locals>.start_response at 0x7efcf4b23550>
+           │    │        └ {'REMOTE_ADDR': '192.168.0.153', 'REMOTE_HOST': '192.168.0.153', 'REMOTE_PORT': '33804', 'REQUEST_METHOD': 'POST', 'SERVER_PO...
+           │    └ <function Flask.wsgi_app at 0x7efe98b114c0>
+           └ <Flask 'app'>
+  File "/home/vd/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+               │    └ <function Flask.full_dispatch_request at 0x7efe98b0b940>
+               └ <Flask 'app'>
+  File "/home/vd/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+         │    └ <function Flask.dispatch_request at 0x7efe98b0b8b0>
+         └ <Flask 'app'>
+  File "/home/vd/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           │    │           │    │              │    │            └ {}
+           │    │           │    │              │    └ 'wrapper_fn'
+           │    │           │    │              └ <Rule '/fr-cls-cass_fresh_500' (OPTIONS, POST) -> wrapper_fn>
+           │    │           │    └ {'static': <function Flask.__init__.<locals>.<lambda> at 0x7efcf4b230d0>, 'wrapper_fn': <bound method processing_time.<locals...
+           │    │           └ <Flask 'app'>
+           │    └ <function Flask.ensure_sync at 0x7efe98b0bc10>
+           └ <Flask 'app'>
+
+  File "/home/vd/vd/ai_engines/util/utils.py", line 39, in wrapper_fn
+    func_result = func(*args, **kwargs)
+                  │     │       └ {}
+                  │     └ (<app.AIEngines object at 0x7efcf4b15340>,)
+                  └ <function AIEngines.execute at 0x7efcf4ba55e0>
+
+> File "/home/vd/vd/ai_engines/app.py", line 136, in execute
+    result = self.engine.run.inference(images, params)
+             │    │      │   │         │       └ {}
+             │    │      │   │         └ '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgICAgUEBAMEBgUGBgYFBgYGBwkIBgcJBwYGCAsICQoKCgoKBggLDAsKDAkKCgr/2wBD...
+             │    │      │   └ <function TorchClassifier.inference at 0x7efcf4b9fe50>
+             │    │      └ <engines.torch_classifier.model.TorchClassifier object at 0x7efe9af55d60>
+             │    └ <engines.engine.Engine object at 0x7efcf4afc520>
+             └ <app.AIEngines object at 0x7efcf4b15340>
+
+  File "/home/vd/.local/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ (<engines.torch_classifier.model.TorchClassifier object at 0x7efe9af55d60>, '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQEC...
+           └ <function TorchClassifier.inference at 0x7efcf4b9fdc0>
+
+  File "/home/vd/vd/ai_engines/engines/torch_classifier/model.py", line 78, in inference
+    raise InferenceError(code=e.code, msg=e.message)
+          └ <class 'error_code.error_code.InferenceError'>
+
+error_code.error_code.InferenceError
+2022-09-06 09:51:00.861 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 4.89s
+2022-09-06 09:51:47.270 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:51:47.271 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:51:47.274 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:51:47.457 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-06 09:51:47.459 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-cass_fresh_500] start serving at 192.168.0.113:8080 revision None🏃‍🐆🐴🏁🏁
+2022-09-06 09:52:02.588 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:52:02.589 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:52:02.590 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:52:02.592 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7ff3d4716430>
+2022-09-06 09:53:00.981 | INFO     | __main__:<module>:47 - log path=./log/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-06 09:53:00.981 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 192.168.0.113:8080 revision None
+2022-09-06 09:53:00.982 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.12.1+cu102, tf=2.3.0 CPU
+
+2022-09-06 09:53:01.111 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-06 09:53:01.112 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-cass_fresh_500] start serving at 192.168.0.113:8080 revision None🏃‍🐆🐴🏁🏁
+2022-09-06 09:53:03.365 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:03.366 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:03.366 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:03.368 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:06.189 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:06.190 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 2.82s
+2022-09-06 09:53:19.150 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:19.151 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:19.151 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:19.153 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:23.647 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:23.648 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 4.5s
+2022-09-06 09:53:38.568 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:38.568 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:38.569 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:38.570 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:38.587 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:38.587 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s
+2022-09-06 09:53:43.974 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:43.974 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:43.975 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:43.976 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:43.993 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:43.993 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s
+2022-09-06 09:53:45.245 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:45.246 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:45.246 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:45.248 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:45.264 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:45.264 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s
+2022-09-06 09:53:46.003 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:46.004 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:46.004 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:46.006 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:46.021 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:46.022 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s
+2022-09-06 09:53:51.738 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:53:51.738 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:53:51.739 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:53:51.740 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:53:51.756 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:53:51.756 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s
+2022-09-06 09:55:04.477 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:55:04.478 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:55:04.478 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:55:04.479 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:55:04.497 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:55:04.497 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s
+2022-09-06 09:55:07.871 | INFO     | app:execute:107 -  🔻🔻🔻 -----    0     ----- 🔻🔻🔻
+2022-09-06 09:55:07.872 | INFO     | app:execute:108 -  🔺🔺🔺 ----- None ----- 🔺🔺🔺
+2022-09-06 09:55:07.872 | INFO     | app:execute:109 - cass_fresh_500 API Start from user id [VD]
+2022-09-06 09:55:07.873 | INFO     | app:execute:134 - <engines.engine.Engine object at 0x7fa5e27a8790>
+2022-09-06 09:55:07.889 | SUCCESS  | app:execute:137 - 🟢 AI inference success !!
+2022-09-06 09:55:07.890 | INFO     | util.utils:wrapper_fn:41 -       ==> Processing time [execute]: 0.02s

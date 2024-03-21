@@ -1,0 +1,41 @@
+augmentation: false
+augmentation_num: 100
+augmentation_options:
+  get_transforms:
+    blur:
+      p: 0.3
+    converttemp:
+      json_file: /home/test/1_SR_RnD/smart_retail_vision/6.new/train_pytorch/data_fn/temperature.json
+      p: 0.5
+    horizontalflip:
+      p: 0.4
+    randombrightness:
+      limit:
+      - -0.2
+      - 0.3
+      p: 0.5
+    randomcontrast:
+      limit:
+      - -0.5
+      - 0.3
+      p: 0.5
+    shift_scale_rotate:
+      border_mode: 1
+      interpolation: 1
+      p: 0.5
+      rotate_limit: 10
+      scale_limit: 0.1
+      shift_limit: 0.1
+    verticalflip:
+      p: 0.1
+class:
+  0: 'False'
+  1: 'True'
+dataset name: condition_hutgae_pet
+epoch: 18
+loss function: CrossEntropyLoss
+model_name: qt_mobilenetv3_small_075
+num_class: 2
+scheduler: GradualWarmupSchedulerV2
+score: 1.0
+val_loss: 4.5474378698533305e-06

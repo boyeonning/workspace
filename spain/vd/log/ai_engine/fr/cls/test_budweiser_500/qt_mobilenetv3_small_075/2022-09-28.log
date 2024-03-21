@@ -1,0 +1,4182 @@
+2022-09-28 16:32:46.859 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:32:46.860 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:32:46.861 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f9bf6f46ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f9b40f0ed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f9acb4e0158>
+    └ <app.AIEngines object at 0x7f9acb4b7048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f9acb4b7048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:32:57.932 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:32:57.932 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.63:8080 revision None
+2022-09-28 16:32:57.934 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f550f77eae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5459746d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f53e3d15158>
+    └ <app.AIEngines object at 0x7f53e3ce6f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f53e3ce6f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:08.667 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:33:08.668 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.63:8080 revision None
+2022-09-28 16:33:08.670 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f5f2b38fae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5e75357d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5dff929158>
+    └ <app.AIEngines object at 0x7f5dff900048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5dff900048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:19.222 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:33:19.223 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.63:8080 revision None
+2022-09-28 16:33:19.224 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f75127e6ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f745c7aed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f73e6d80158>
+    └ <app.AIEngines object at 0x7f73e6d57048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f73e6d57048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:29.745 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:33:29.746 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.63:8080 revision None
+2022-09-28 16:33:29.747 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f32fac1aae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3244be2d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f31cf1b2158>
+    └ <app.AIEngines object at 0x7f31cf18c048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f31cf18c048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:39.999 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:33:40.000 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:33:40.001 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f50f6f59ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5040f20d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4fcb4f0158>
+    └ <app.AIEngines object at 0x7f4fcb4c2f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4fcb4c2f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:50.273 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:33:50.274 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:33:50.276 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa5f7607ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa5415cfd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa4cbba0158>
+    └ <app.AIEngines object at 0x7fa4cbb78048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa4cbb78048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:00.691 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:34:00.692 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:34:00.693 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f90b3c5fae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f8ffdc27d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f8f881f8158>
+    └ <app.AIEngines object at 0x7f8f881d0048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f8f881d0048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:11.273 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:34:11.273 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:34:11.275 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f0ea2266ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f0dec22ed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f0d76800158>
+    └ <app.AIEngines object at 0x7f0d767d7048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f0d767d7048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:21.964 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:34:21.964 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.63:8080 revision None
+2022-09-28 16:34:21.966 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc9c9e2cae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc913df4d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc89e3c5158>
+    └ <app.AIEngines object at 0x7fc89e394f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc89e394f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:32.349 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:34:32.349 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.63:8080 revision None
+2022-09-28 16:34:32.351 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4720d70ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f466ad38d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f45f5307158>
+    └ <app.AIEngines object at 0x7f45f52e2048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f45f52e2048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:42.864 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:34:42.865 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:34:42.866 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fead3209ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fea1d1d0d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe9a77a0158>
+    └ <app.AIEngines object at 0x7fe9a777b048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe9a777b048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:53.859 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:34:53.860 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.65:8080 revision None
+2022-09-28 16:34:53.861 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f8521a20ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f846b9e8d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f83f5fb7158>
+    └ <app.AIEngines object at 0x7f83f5f92048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f83f5f92048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:04.419 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:35:04.419 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.65:8080 revision None
+2022-09-28 16:35:04.421 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fcaf8af4ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fca42abcd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc9cd08d158>
+    └ <app.AIEngines object at 0x7fc9cd066048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc9cd066048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:14.973 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:35:14.974 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:14.975 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4762a89ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f46aca51d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4637023158>
+    └ <app.AIEngines object at 0x7f4636ffa048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4636ffa048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:25.079 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:35:25.080 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:25.082 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7ff2e2912ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7ff22c8dad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7ff1b6eab158>
+    └ <app.AIEngines object at 0x7ff1b6e83048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7ff1b6e83048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:35.416 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:35:35.416 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:35.418 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7ff8534a3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7ff79d46bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7ff727a3d158>
+    └ <app.AIEngines object at 0x7ff727a14048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7ff727a14048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:45.762 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:35:45.763 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:45.764 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb067661ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fafb1629d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7faf3bbfb158>
+    └ <app.AIEngines object at 0x7faf3bbc9f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7faf3bbc9f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:56.016 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:35:56.016 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:56.018 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f19c18aeae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f190b876d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f1895e45158>
+    └ <app.AIEngines object at 0x7f1895e20048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f1895e20048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:06.110 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:36:06.110 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.66:8080 revision None
+2022-09-28 16:36:06.112 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb2fecd8ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb248ca0d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb1d3272158>
+    └ <app.AIEngines object at 0x7fb1d3249048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb1d3249048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:16.909 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:36:16.910 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.67:8080 revision None
+2022-09-28 16:36:16.913 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f7bdcc4bae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f7b26c13d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f7ab11e5158>
+    └ <app.AIEngines object at 0x7f7ab11b3f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f7ab11b3f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:29.607 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:36:29.607 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.69:8080 revision None
+2022-09-28 16:36:29.609 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fdb96a52ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fdae0a1ad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fda6afeb158>
+    └ <app.AIEngines object at 0x7fda6afbaf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fda6afbaf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:41.190 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:36:41.190 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.71:8080 revision None
+2022-09-28 16:36:41.192 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fbd97de9ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fbce1db1d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fbc6c383158>
+    └ <app.AIEngines object at 0x7fbc6c35a048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fbc6c35a048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:52.418 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:36:52.418 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:36:52.420 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f2aa5ff3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f29effbbd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f297a58c158>
+    └ <app.AIEngines object at 0x7f297a564048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f297a564048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:02.901 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:37:02.901 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:37:02.903 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3c29570ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3b73538d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f3afdb09158>
+    └ <app.AIEngines object at 0x7f3afdae2048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f3afdae2048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:13.300 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:37:13.300 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:13.302 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f8a747baae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f89be782d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f8948d53158>
+    └ <app.AIEngines object at 0x7f8948d2b048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f8948d2b048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:23.969 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:37:23.970 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:37:23.971 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f7319952ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f726391ad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f71edeea158>
+    └ <app.AIEngines object at 0x7f71edec4048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f71edec4048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:34.658 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:37:34.659 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:34.660 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fdb532b1ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fda9d279d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fda2784b158>
+    └ <app.AIEngines object at 0x7fda27822048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fda27822048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:45.017 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:37:45.017 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:37:45.019 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f9d8a3dcae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f9cd43a4d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f9c5e976158>
+    └ <app.AIEngines object at 0x7f9c5e94d048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f9c5e94d048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:55.444 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:37:55.445 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:37:55.446 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f1b0a8aeae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f1a54876d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f19dee47158>
+    └ <app.AIEngines object at 0x7f19dee1f048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f19dee1f048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:05.967 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:38:05.967 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.73:8080 revision None
+2022-09-28 16:38:05.969 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa311213ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa25b1dbd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa1e57aa158>
+    └ <app.AIEngines object at 0x7fa1e5785048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa1e5785048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:16.346 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:38:16.346 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.73:8080 revision None
+2022-09-28 16:38:16.348 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f91d2395ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f911c35dd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f90a692d158>
+    └ <app.AIEngines object at 0x7f90a6907048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f90a6907048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:26.507 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:38:26.507 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.73:8080 revision None
+2022-09-28 16:38:26.509 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe5d61f2ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fe5201bad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe4aa789158>
+    └ <app.AIEngines object at 0x7fe4aa763048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe4aa763048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:37.140 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:38:37.141 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.73:8080 revision None
+2022-09-28 16:38:37.143 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fefbda08ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fef079d0d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fee91fa2158>
+    └ <app.AIEngines object at 0x7fee91f79048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fee91f79048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:49.215 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:38:49.215 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.34:8080 revision None
+2022-09-28 16:38:49.217 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fd275de7ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fd1bfdafd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fd14a37e158>
+    └ <app.AIEngines object at 0x7fd14a359048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fd14a359048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:59.325 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:38:59.326 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:38:59.328 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f515f536ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f50a94fed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5033acf158>
+    └ <app.AIEngines object at 0x7f5033a9ef60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5033a9ef60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:09.352 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:39:09.352 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:39:09.355 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f6fd33b3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f6f1d37bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f6ea794d158>
+    └ <app.AIEngines object at 0x7f6ea7924048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f6ea7924048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:19.656 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:39:19.656 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:39:19.658 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f986a969ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f97b4931d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f973ef02158>
+    └ <app.AIEngines object at 0x7f973eedb048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f973eedb048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:30.074 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:39:30.075 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:39:30.077 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc12f401ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc0793c9d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc003999158>
+    └ <app.AIEngines object at 0x7fc003969f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc003969f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:40.452 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:39:40.453 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:39:40.454 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3f7ec47ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3ec8c0fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f3e531e0158>
+    └ <app.AIEngines object at 0x7f3e531b8048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f3e531b8048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:50.601 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:39:50.604 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:39:50.606 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f0a8cacbae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f09d6a93d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f0961064158>
+    └ <app.AIEngines object at 0x7f096103d048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f096103d048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:00.875 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:40:00.876 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:40:00.878 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f2f8a998ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f2ed4960d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f2e5ef31158>
+    └ <app.AIEngines object at 0x7f2e5eefc048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f2e5eefc048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:11.483 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:40:11.484 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:40:11.486 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f822975aae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f8173722d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f80fdcf4158>
+    └ <app.AIEngines object at 0x7f80fdccb048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f80fdccb048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:22.054 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:40:22.054 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:40:22.056 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f316b306ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f30b52ced90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f303f89f158>
+    └ <app.AIEngines object at 0x7f303f878048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f303f878048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:32.623 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:40:32.624 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:40:32.626 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f045d8c3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f03a788bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f0331e5c158>
+    └ <app.AIEngines object at 0x7f0331e34048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f0331e34048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:43.207 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:40:43.208 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:40:43.210 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f21b9d19ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f2103ce1d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f208e2b0158>
+    └ <app.AIEngines object at 0x7f208e282f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f208e282f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:53.915 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:40:53.916 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:40:53.918 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f94b3ed1ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f93fde99d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f938846a158>
+    └ <app.AIEngines object at 0x7f9388442048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f9388442048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:04.902 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:41:04.903 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:41:04.904 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f653403dae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f647e005d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f64085d6158>
+    └ <app.AIEngines object at 0x7f64085ae048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f64085ae048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:15.353 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:41:15.353 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:41:15.355 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa9b1fd1ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa8fbf99d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa88656b158>
+    └ <app.AIEngines object at 0x7fa886542048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa886542048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:26.249 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:41:26.249 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:41:26.251 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f020334fae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f014d317d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f00d78e7158>
+    └ <app.AIEngines object at 0x7f00d78b7f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f00d78b7f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:36.938 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:41:36.938 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:41:36.940 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe9e2332ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fe92c2fad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe8b68cc158>
+    └ <app.AIEngines object at 0x7fe8b689af60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe8b689af60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:47.357 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:41:47.357 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:41:47.359 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7faefe908ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fae488d0d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fadd2e9f158>
+    └ <app.AIEngines object at 0x7fadd2e7a048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fadd2e7a048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:57.651 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:41:57.651 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:41:57.653 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f12bb29eae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f1205266d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f118f837158>
+    └ <app.AIEngines object at 0x7f118f80f048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f118f80f048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:07.953 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:42:07.954 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:42:07.956 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f007e3eaae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7effc83b2d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7eff52984158>
+    └ <app.AIEngines object at 0x7eff5295b048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7eff5295b048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:18.183 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:42:18.184 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:42:18.185 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f48b0187ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f47fa14fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4784721158>
+    └ <app.AIEngines object at 0x7f47846f8048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f47846f8048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:29.258 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:42:29.258 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:42:29.260 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb8915eeae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb7db5b6d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb765b88158>
+    └ <app.AIEngines object at 0x7fb765b5f048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb765b5f048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:39.487 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:42:39.487 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:42:39.489 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f6ccda18ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f6c179dfd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f6ba1fb1158>
+    └ <app.AIEngines object at 0x7f6ba1f89048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f6ba1f89048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:49.849 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:42:49.849 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:42:49.851 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f24673ebae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f23b13b3d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f233b982158>
+    └ <app.AIEngines object at 0x7f233b954f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f233b954f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:00.002 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:43:00.003 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:43:00.005 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe03f4efae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fdf894b7d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fdf13a89158>
+    └ <app.AIEngines object at 0x7fdf13a60048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fdf13a60048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:10.049 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:43:10.049 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:43:10.051 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe135121ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fe07f0e9d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe0096b8158>
+    └ <app.AIEngines object at 0x7fe009693048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe009693048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:20.271 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:43:20.271 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:43:20.273 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f8b38dc7ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f8a82d8fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f8a0d360158>
+    └ <app.AIEngines object at 0x7f8a0d338048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f8a0d338048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:30.667 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:43:30.667 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:43:30.669 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fd7b3a69ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fd6fda31d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fd688003158>
+    └ <app.AIEngines object at 0x7fd687fda048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fd687fda048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:41.084 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:43:41.084 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:43:41.086 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe5af1d4ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fe4f919cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe48376b158>
+    └ <app.AIEngines object at 0x7fe483746048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe483746048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:51.462 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:43:51.463 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:43:51.464 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fafda270ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7faf24238d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7faeae807158>
+    └ <app.AIEngines object at 0x7faeae7e2048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7faeae7e2048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:01.769 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:44:01.769 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:44:01.771 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f7bd6d38ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f7b20d00d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f7aab2d1158>
+    └ <app.AIEngines object at 0x7f7aab2a9048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f7aab2a9048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:11.783 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:44:11.783 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:44:11.785 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fde63252ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fddad21ad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fdd377e9158>
+    └ <app.AIEngines object at 0x7fdd377bbf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fdd377bbf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:22.095 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:44:22.095 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:44:22.097 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc34cbe3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc296babd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc22117c158>
+    └ <app.AIEngines object at 0x7fc221147048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc221147048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:32.123 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:44:32.123 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:44:32.125 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe8b5ea4ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fe7ffe6cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe78a43e158>
+    └ <app.AIEngines object at 0x7fe78a415048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe78a415048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:42.077 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:44:42.077 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:44:42.079 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f2cb759bae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f2c01562d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f2b8bb34158>
+    └ <app.AIEngines object at 0x7f2b8bb03f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f2b8bb03f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:52.177 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:44:52.177 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:44:52.179 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fdcb1335ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fdbfb2fdd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fdb858cc158>
+    └ <app.AIEngines object at 0x7fdb858a7048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fdb858a7048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:45:02.300 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:45:02.300 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:45:02.302 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4c70c74ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4bbac3cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4b4520d158>
+    └ <app.AIEngines object at 0x7f4b451e52b0>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4b451e52b0>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:45:12.701 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 16:45:12.702 | INFO     | __main__:<module>:49 - test_budweiser_500 initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:45:12.704 | ERROR    | app:load_engine:41 - model load error -> [test_budweiser_500] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7efd2546dae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_budweiser_500'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7efc6f435d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7efbf9a04158>
+    └ <app.AIEngines object at 0x7efbf99df048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7efbf99df048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 17:14:31.813 | INFO     | __main__:<module>:53 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 17:14:31.814 | INFO     | __main__:<module>:55 - test_budweiser_500 initializing at 172.18.0.81:8080 revision None
+2022-09-28 17:14:31.818 | INFO     | __main__:<module>:67 - 🏁🛵🏎🏍[fr-cls-test_budweiser_500] start serving at 172.18.0.81:8080 revision None🏃‍🐆🐴🏁🏁
+2022-09-28 17:27:55.878 | INFO     | __main__:<module>:53 - log path=/var/log/ai_engine/fr/cls/test_budweiser_500/qt_mobilenetv3_small_075
+2022-09-28 17:27:55.879 | INFO     | __main__:<module>:55 - test_budweiser_500 initializing at 172.18.0.79:8080 revision None
+2022-09-28 17:27:55.883 | INFO     | __main__:<module>:67 - 🏁🛵🏎🏍[fr-cls-test_budweiser_500] start serving at 172.18.0.79:8080 revision None🏃‍🐆🐴🏁🏁

@@ -1,0 +1,6 @@
+2022-09-22 12:11:44.939 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/cass_fresh_500/qt_mobilenetv3_small_075
+2022-09-22 12:11:44.940 | INFO     | __main__:<module>:49 - cass_fresh_500 initializing at 172.18.0.4:8080 revision None
+2022-09-22 12:11:44.943 | INFO     | util.utils:select_device:73 - AI Engine 🚀 torch=1.10.0+cu102, tf=2.3.0 CPU
+
+2022-09-22 12:11:45.097 | SUCCESS  | app:get_model:55 - qt_mobilenetv3_small_075 loaded with version 0 !!
+2022-09-22 12:11:45.098 | INFO     | __main__:<module>:56 - 🏁🛵🏎🏍[fr-cls-cass_fresh_500] start serving at 172.18.0.4:8080 revision None🏃‍🐆🐴🏁🏁

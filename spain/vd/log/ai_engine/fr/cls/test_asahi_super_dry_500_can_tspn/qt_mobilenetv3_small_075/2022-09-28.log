@@ -1,0 +1,4182 @@
+2022-09-28 16:32:46.450 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:32:46.450 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.61:8080 revision None
+2022-09-28 16:32:46.452 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f8413ecbae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f835de93d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f82e8460158>
+    └ <app.AIEngines object at 0x7f82e842f048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f82e842f048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:32:56.914 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:32:56.914 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:32:56.916 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3996875ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f38e083dd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f386ae0f158>
+    └ <app.AIEngines object at 0x7f386add9048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f386add9048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:07.034 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:33:07.034 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:33:07.036 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f9535aa4ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f947fa6cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f940a03e158>
+    └ <app.AIEngines object at 0x7f940a008048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f940a008048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:17.245 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:33:17.245 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:33:17.247 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f2c516bdae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f2b9b685d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f2b25c57158>
+    └ <app.AIEngines object at 0x7f2b25c26f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f2b25c26f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:27.515 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:33:27.515 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:33:27.517 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f54f6b5fae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5440b27d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f53cb0f9158>
+    └ <app.AIEngines object at 0x7f53cb0c3048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f53cb0c3048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:37.971 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:33:37.971 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:33:37.973 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fd591357ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fd4db31fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fd4658f0158>
+    └ <app.AIEngines object at 0x7fd4658bb048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fd4658bb048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:48.128 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:33:48.129 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:33:48.131 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe08ca4eae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fdfd6a16d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fdf60fe8158>
+    └ <app.AIEngines object at 0x7fdf60fb2048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fdf60fb2048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:33:58.374 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:33:58.375 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:33:58.377 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa670f09ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa5baed1d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa5454a3158>
+    └ <app.AIEngines object at 0x7fa54546d048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa54546d048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:08.701 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:34:08.701 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:34:08.703 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4e7ad39ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4dc4d01d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4d4f2d3158>
+    └ <app.AIEngines object at 0x7f4d4f29d048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4d4f29d048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:18.925 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:34:18.925 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:34:18.927 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f2ea48e5ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f2dee8add90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f2d78e7e158>
+    └ <app.AIEngines object at 0x7f2d78e55048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f2d78e55048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:29.156 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:34:29.156 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:34:29.158 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7faedee2dae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fae28df5d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fadb33c7158>
+    └ <app.AIEngines object at 0x7fadb3391048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fadb3391048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:39.244 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:34:39.244 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.60:8080 revision None
+2022-09-28 16:34:39.246 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7faab1044ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa9fb00cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa9855dc158>
+    └ <app.AIEngines object at 0x7fa9855a9048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa9855a9048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:49.390 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:34:49.390 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:34:49.392 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f5d5936eae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5ca3336d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5c2d908158>
+    └ <app.AIEngines object at 0x7f5c2d8d2048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5c2d8d2048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:34:59.717 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:34:59.718 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:34:59.720 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f82f7267ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f824122fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f81cb800158>
+    └ <app.AIEngines object at 0x7f81cb7d7048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f81cb7d7048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:09.908 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:35:09.908 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:09.910 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4cec842ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4c3680ad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4bc0ddb158>
+    └ <app.AIEngines object at 0x7f4bc0dabf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4bc0dabf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:20.165 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:35:20.166 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:20.167 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb620bddae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb56aba5d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb4f5176158>
+    └ <app.AIEngines object at 0x7fb4f514d048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb4f514d048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:30.312 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:35:30.312 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:30.314 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f40cff6cae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4019f33d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f3fa4503158>
+    └ <app.AIEngines object at 0x7f3fa44dd048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f3fa44dd048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:40.414 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:35:40.415 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:40.416 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fd64d444ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fd59740cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fd5219db158>
+    └ <app.AIEngines object at 0x7fd5219a8048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fd5219a8048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:35:50.601 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:35:50.601 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:35:50.603 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc962921ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc8ac8e9d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc836eba158>
+    └ <app.AIEngines object at 0x7fc836e92048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc836e92048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:00.724 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:36:00.724 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.62:8080 revision None
+2022-09-28 16:36:00.726 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f6043b88ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5f8db50d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5f18121158>
+    └ <app.AIEngines object at 0x7f5f180f8048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5f180f8048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:10.918 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:36:10.919 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.64:8080 revision None
+2022-09-28 16:36:10.924 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fd4106daae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fd35a6a2d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fd2e4c73158>
+    └ <app.AIEngines object at 0x7fd2e4c4a048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fd2e4c4a048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:23.309 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:36:23.309 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.64:8080 revision None
+2022-09-28 16:36:23.312 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fba1e7d8ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb9687a0d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb8f2d70158>
+    └ <app.AIEngines object at 0x7fb8f2d3c048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb8f2d3c048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:36.322 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:36:36.323 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.66:8080 revision None
+2022-09-28 16:36:36.324 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc2305c3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc17a58bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc104b5c158>
+    └ <app.AIEngines object at 0x7fc104b2cf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc104b2cf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:46.785 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:36:46.786 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:36:46.787 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f1029bbaae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f0f73b82d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f0efe151158>
+    └ <app.AIEngines object at 0x7f0efe11f048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f0efe11f048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:36:57.736 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:36:57.736 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:36:57.738 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe09c464ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fdfe642cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fdf709fd158>
+    └ <app.AIEngines object at 0x7fdf709d5048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fdf709d5048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:08.271 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:37:08.272 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:08.273 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f5b0dcb8ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5a57c80d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f59e2250158>
+    └ <app.AIEngines object at 0x7f59e221c048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f59e221c048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:18.697 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:37:18.698 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:18.699 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fab8c2e0ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7faad62a8d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7faa6087a158>
+    └ <app.AIEngines object at 0x7faa60844048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7faa60844048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:29.453 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:37:29.453 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:29.455 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fced5faaae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fce1ff71d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fcdaa543158>
+    └ <app.AIEngines object at 0x7fcdaa50e048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fcdaa50e048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:40.104 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:37:40.105 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:40.107 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f1bfa266ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f1b4422ed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f1ace7fd158>
+    └ <app.AIEngines object at 0x7f1ace7ca048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f1ace7ca048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:37:50.581 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:37:50.581 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:37:50.583 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f437a83cae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f42c4804d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f424edd6158>
+    └ <app.AIEngines object at 0x7f424eda0048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f424eda0048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:01.213 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:38:01.213 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:38:01.215 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f42d6eb0ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4220e78d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f41ab448158>
+    └ <app.AIEngines object at 0x7f41ab415048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f41ab415048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:11.669 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:38:11.669 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:38:11.671 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f77a0ea1ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f76eae69d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f7675438158>
+    └ <app.AIEngines object at 0x7f7675406048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f7675406048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:22.239 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:38:22.240 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:38:22.241 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f26007c2ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f254a78ad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f24d4d5b158>
+    └ <app.AIEngines object at 0x7f24d4d33048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f24d4d33048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:32.792 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:38:32.793 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:38:32.795 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f07786faae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f06c26c2d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f064cc93158>
+    └ <app.AIEngines object at 0x7f064cc5e048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f064cc5e048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:45.818 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:38:45.818 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:38:45.820 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f95a86d7ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f94f269fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f947cc70158>
+    └ <app.AIEngines object at 0x7f947cc40f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f947cc40f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:38:56.432 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:38:56.433 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.34:8080 revision None
+2022-09-28 16:38:56.435 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb5e2c6cae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb52cc34d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb4b7206158>
+    └ <app.AIEngines object at 0x7fb4b71d0048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb4b71d0048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:07.314 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:39:07.314 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:39:07.316 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb067992ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fafb195ad90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7faf3bf2c158>
+    └ <app.AIEngines object at 0x7faf3befbf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7faf3befbf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:18.057 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:39:18.058 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.34:8080 revision None
+2022-09-28 16:39:18.059 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc9411cfae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc88b197d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc815769158>
+    └ <app.AIEngines object at 0x7fc815733048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc815733048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:28.703 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:39:28.704 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:39:28.706 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f08dfcbaae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f0829c82d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f07b4254158>
+    └ <app.AIEngines object at 0x7f07b421e048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f07b421e048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:39.353 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:39:39.354 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:39:39.356 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3387e70ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f32d1e38d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f325c40a158>
+    └ <app.AIEngines object at 0x7f325c3d4048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f325c3d4048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:39:49.708 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:39:49.708 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:39:49.710 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fc3d7f1eae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fc321ee6d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fc2ac4b5158>
+    └ <app.AIEngines object at 0x7fc2ac483048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fc2ac483048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:00.360 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:40:00.361 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:40:00.362 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f14257dbae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f136f7a3d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f12f9d74158>
+    └ <app.AIEngines object at 0x7f12f9d44f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f12f9d44f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:11.075 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:40:11.076 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.34:8080 revision None
+2022-09-28 16:40:11.078 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa4e6a8dae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa430a55d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa3bb026158>
+    └ <app.AIEngines object at 0x7fa3baff6f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa3baff6f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:21.604 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:40:21.605 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:40:21.606 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7ffb3c125ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7ffa860ecd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7ffa106bc158>
+    └ <app.AIEngines object at 0x7ffa10689048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7ffa10689048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:32.067 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:40:32.068 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:40:32.070 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f87cb446ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f871540ed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f869f9de158>
+    └ <app.AIEngines object at 0x7f869f9aff60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f869f9aff60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:42.488 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:40:42.488 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:40:42.490 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f598e609ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f58d85d1d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5862ba1158>
+    └ <app.AIEngines object at 0x7f5862b6e048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5862b6e048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:40:53.236 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:40:53.236 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:40:53.239 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f19914abae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f18db473d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f1865a44158>
+    └ <app.AIEngines object at 0x7f1865a1b048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f1865a1b048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:04.775 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:41:04.775 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:41:04.777 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa094b0cae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f9fdead4d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f9f690a4158>
+    └ <app.AIEngines object at 0x7f9f69070048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f9f69070048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:15.261 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:41:15.261 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:41:15.263 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3879e54ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f37c3e1cd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f374e3ec158>
+    └ <app.AIEngines object at 0x7f374e3bdf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f374e3bdf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:26.282 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:41:26.283 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.68:8080 revision None
+2022-09-28 16:41:26.284 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb8e6b6aae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb830b32d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb7bb103158>
+    └ <app.AIEngines object at 0x7fb7bb0da048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb7bb0da048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:37.098 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:41:37.099 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:41:37.100 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3ad4958ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3a1e920d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f39a8eef158>
+    └ <app.AIEngines object at 0x7f39a8ec2f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f39a8ec2f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:47.927 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:41:47.927 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:41:47.929 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f7b75360ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f7abf328d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f7a498fa158>
+    └ <app.AIEngines object at 0x7f7a498c4048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f7a498c4048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:41:58.320 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:41:58.320 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:41:58.322 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f70b8287ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f700224fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f6f8c81e158>
+    └ <app.AIEngines object at 0x7f6f8c7eb048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f6f8c7eb048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:08.543 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:42:08.543 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:42:08.545 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f57ad943ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f56f790bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5681edd158>
+    └ <app.AIEngines object at 0x7f5681ea7048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5681ea7048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:18.804 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:42:18.805 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:42:18.806 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3349c99ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3293c61d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f321e233158>
+    └ <app.AIEngines object at 0x7f321e1fd048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f321e1fd048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:29.853 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:42:29.853 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:42:29.855 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4f8fcbbae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4ed9c83d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4e64255158>
+    └ <app.AIEngines object at 0x7f4e6421f048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4e6421f048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:40.282 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:42:40.283 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:42:40.287 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb59faa7ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fb4e9a6fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fb474040158>
+    └ <app.AIEngines object at 0x7fb47400b048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fb47400b048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:42:50.475 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:42:50.475 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:42:50.477 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f58ac677ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f57f663fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5780c10158>
+    └ <app.AIEngines object at 0x7f5780bdb048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5780bdb048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:00.771 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:43:00.771 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:43:00.773 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fe87dff3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fe7c7fbbd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fe75258c158>
+    └ <app.AIEngines object at 0x7fe752564048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fe752564048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:11.137 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:43:11.137 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:43:11.139 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f5e29421ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f5d733e9d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f5cfd9bb158>
+    └ <app.AIEngines object at 0x7f5cfd985048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f5cfd985048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:21.508 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:43:21.509 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:43:21.510 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f78ed71dae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f78376e5d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f77c1cb7158>
+    └ <app.AIEngines object at 0x7f77c1c81048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f77c1c81048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:31.650 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:43:31.650 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:43:31.652 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f7fb3f31ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f7efdef9d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f7e884ca158>
+    └ <app.AIEngines object at 0x7f7e88495048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f7e88495048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:41.580 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:43:41.580 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:43:41.582 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f3b4d7e7ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3a977afd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f3a21d81158>
+    └ <app.AIEngines object at 0x7f3a21d4b048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f3a21d4b048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:43:51.783 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:43:51.783 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:43:51.785 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fa1ecf07ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fa136ecfd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7fa0c14a0158>
+    └ <app.AIEngines object at 0x7fa0c1478048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7fa0c1478048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:02.042 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:44:02.043 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:44:02.046 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f746ec46ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f73b8c0ed90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f73431e0158>
+    └ <app.AIEngines object at 0x7f73431aff60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f73431aff60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:12.626 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:44:12.626 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:44:12.628 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f00c3f35ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f000defdd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7eff984cc158>
+    └ <app.AIEngines object at 0x7eff9849a048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7eff9849a048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:22.702 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:44:22.703 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:44:22.704 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f15f2422ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f153c3e9d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f14c69b9158>
+    └ <app.AIEngines object at 0x7f14c6986048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f14c6986048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:32.907 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:44:32.908 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:44:32.909 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4debad3ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4d35a9bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4cc006c158>
+    └ <app.AIEngines object at 0x7f4cc003cf60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4cc003cf60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:43.146 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:44:43.147 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:44:43.148 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7fb095857ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7fafdf81fd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7faf69df1158>
+    └ <app.AIEngines object at 0x7faf69dc0f60>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7faf69dc0f60>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:44:53.156 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:44:53.156 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:44:53.158 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f37eb080ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f3735048d90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f36bf61a158>
+    └ <app.AIEngines object at 0x7f36bf5e4048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f36bf5e4048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:45:03.439 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:45:03.439 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:45:03.441 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f55a2f45ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f54ecf0dd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f54774dd158>
+    └ <app.AIEngines object at 0x7f54774a9048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f54774a9048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 16:45:13.791 | INFO     | __main__:<module>:47 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 16:45:13.791 | INFO     | __main__:<module>:49 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.72:8080 revision None
+2022-09-28 16:45:13.793 | ERROR    | app:load_engine:41 - model load error -> [test_asahi_super_dry_500_can_tspn] weight load error -> 해당 버전은 없습니다.
+Traceback (most recent call last):
+
+  File "/app/util/utils.py", line 30, in get_path_version
+    assert os.path.isdir(path + '/' + version), FileExistsError('해당 버전은 없습니다.')
+           │  │    │     │            └ '0'
+           │  │    │     └ '/mnt/weight/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075'
+           │  │    └ <function isdir at 0x7f4df6243ae8>
+           │  └ <module 'posixpath' from '/usr/lib/python3.6/posixpath.py'>
+           └ <module 'os' from '/usr/lib/python3.6/os.py'>
+
+AssertionError: 해당 버전은 없습니다.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/app/app.py", line 47, in get_model
+    path, version = get_path_version(weight_path, device_type, model_type, model_name, network, version)
+                    │                │            │            │           │           │        └ '0'
+                    │                │            │            │           │           └ 'qt_mobilenetv3_small_075'
+                    │                │            │            │           └ 'test_asahi_super_dry_500_can_tspn'
+                    │                │            │            └ 'cls'
+                    │                │            └ 'fr'
+                    │                └ '/mnt/weight/'
+                    └ <function get_path_version at 0x7f4d4020bd90>
+
+  File "/app/util/utils.py", line 33, in get_path_version
+    raise WeightLoadError(msg=e)
+          └ <class 'error_code.error_code.WeightLoadError'>
+
+error_code.error_code.WeightLoadError
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "waitress_server.py", line 52, in <module>
+    ai.load_engine()
+    │  └ <function AIEngines.load_engine at 0x7f4cca7dc158>
+    └ <app.AIEngines object at 0x7f4cca7b3048>
+
+> File "/app/app.py", line 38, in load_engine
+    version=self.version
+            │    └ '0'
+            └ <app.AIEngines object at 0x7f4cca7b3048>
+
+  File "/app/app.py", line 58, in get_model
+    raise ModelLoadError(code=e.code, msg=f'[{model_name}] {e.message}')
+          └ <class 'error_code.error_code.ModelLoadError'>
+
+error_code.error_code.ModelLoadError
+2022-09-28 17:14:31.893 | INFO     | __main__:<module>:53 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 17:14:31.894 | INFO     | __main__:<module>:55 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.80:8080 revision None
+2022-09-28 17:14:31.898 | INFO     | __main__:<module>:67 - 🏁🛵🏎🏍[fr-cls-test_asahi_super_dry_500_can_tspn] start serving at 172.18.0.80:8080 revision None🏃‍🐆🐴🏁🏁
+2022-09-28 17:27:56.818 | INFO     | __main__:<module>:53 - log path=/var/log/ai_engine/fr/cls/test_asahi_super_dry_500_can_tspn/qt_mobilenetv3_small_075
+2022-09-28 17:27:56.818 | INFO     | __main__:<module>:55 - test_asahi_super_dry_500_can_tspn initializing at 172.18.0.80:8080 revision None
+2022-09-28 17:27:56.823 | INFO     | __main__:<module>:67 - 🏁🛵🏎🏍[fr-cls-test_asahi_super_dry_500_can_tspn] start serving at 172.18.0.80:8080 revision None🏃‍🐆🐴🏁🏁

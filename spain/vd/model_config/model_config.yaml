@@ -1,0 +1,36 @@
+cls_jw_test:
+  deploy: speed_test
+  device_type: fr
+  gpu_num: cpu
+  model_name: jw_test
+  model_type: cls
+  network: qt_mobilenetv3_small_075
+  node: spain
+  replicas: 1
+  update_time: '-1'
+  version: '0'
+  port: 52111 
+cls_cass_fresh_500:
+  deploy: speed_test
+  device_type: fr
+  gpu_num: cpu
+  model_name: cass_fresh_500
+  model_type: cls
+  network: qt_mobilenetv3_small_075
+  node: spain
+  replicas: 1
+  update_time: '-1'
+  version: '1'
+  port: 52112
+cls_asahi_super_dry_500_can_tspn:
+  deploy: speed_test
+  device_type: fr
+  gpu_num: cpu
+  model_name: asahi_super_dry_500_can_tspn
+  model_type: cls
+  network: qt_mobilenetv3_small_075
+  node: spain
+  replicas: 1
+  update_time: '-1'
+  version: '0'
+  port: 52113
